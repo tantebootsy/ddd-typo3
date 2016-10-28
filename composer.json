@@ -1,0 +1,20 @@
+{
+	"repositories": [
+		{ "type": "composer", "url": "https://composer.typo3.org/" }
+	],
+	"name": "T3-Template v7",
+	"description" : "TYPO3-Template with version 7",
+	"license": "GPL-2.0+",
+	"require": {
+		"typo3/cms": "^7.6",
+		"typo3-ter/bsdist": "^1.0.0",
+		"typo3-ter/bootstrap-grids": "^1.0.0",
+		"typo3-ter/news":"^5.0.0"
+	},
+	"extra": {
+		"typo3/cms": {
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"web-dir": "htdocs"
+		}
+	}
+}

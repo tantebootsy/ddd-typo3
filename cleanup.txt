@@ -1,0 +1,13 @@
+M be_users WHERE username = 'editor' OR username = 'powereditor';
+TRUNCATE TABLE sys_news;
+TRUNCATE TABLE backend_layout;
+TRUNCATE TABLE pages_language_overlay;
+TRUNCATE TABLE sys_category;
+TRUNCATE TABLE sys_category_record_mm;
+TRUNCATE TABLE fe_groups;
+TRUNCATE TABLE fe_users;
+TRUNCATE TABLE sys_file;
+TRUNCATE TABLE sys_file_metadata;
+TRUNCATE TABLE sys_file_reference;
+DELETE FROM sys_file_storage WHERE uid != 1;
+
