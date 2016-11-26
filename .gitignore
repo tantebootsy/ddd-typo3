@@ -12,6 +12,7 @@
 ##################
 ### TYPO3
 ##################
+/htdocs/typo3
 /htdocs/typo3temp
 /htdocs/uploads
 
