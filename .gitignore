@@ -3,25 +3,16 @@
 ##################
 .DS_Store
 /vendor
-/logs
-/tmp
-/db
-/configuration
-/.rocketeer
 
 
 ##################
 ### TYPO3
 ##################
 /htdocs/typo3
+/htdocs/typo3conf/ext
 /htdocs/typo3temp
 /htdocs/uploads
 
-/htdocs/typo3conf/*
-!/htdocs/typo3conf/LocalConfiguration.php
-!/htdocs/typo3conf/PackageStates.php
-
-/htdocs/fileadmin/*
 # Extension bsdist
 !/htdocs/fileadmin/bsdist
 !/htdocs/fileadmin/files

@@ -299,7 +299,7 @@ class PageLayoutView
                 $content .= $linkTitle;
             }
         } else {
-            $text = sprintf($this->getLanguageService()->sL(self::LLPATH . 'pagemodule.pageNotAvailable'),
+            $text = sprintf($this->getLanguageService()->sL(self::LLPATH . 'pagemodule.recordNotAvailable'),
                 $id);
             $content = $this->generateCallout($text);
         }
@@ -378,40 +378,46 @@ class PageLayoutView
      */
     public function getCategorySettings($showCategoryMode = true)
     {
-        $categoryMode = '';
-        $categoriesOut = [];
-
         $categories = GeneralUtility::intExplode(',', $this->getFieldFromFlexform('settings.categories'), true);
         if (count($categories) > 0) {
+            $categoriesOut = [];
+            foreach ($categories as $id) {
+                $categoriesOut[] = $this->getRecordData($id, 'sys_category');
+            }
+
+            $this->tableData[] = [
+                $this->getLanguageService()->sL(self::LLPATH . 'flexforms_general.categories'),
+                implode(', ', $categoriesOut)
+            ];
 
             // Category mode
-            $categoryModeSelection = $this->getFieldFromFlexform('settings.categoryConjunction');
-
             if ($showCategoryMode) {
+                $categoryModeSelection = $this->getFieldFromFlexform('settings.categoryConjunction');
                 if (empty($categoryModeSelection)) {
                     $categoryMode = $this->getLanguageService()->sL(self::LLPATH . 'flexforms_general.categoryConjunction.all');
                 } else {
                     $categoryMode = $this->getLanguageService()->sL(self::LLPATH . 'flexforms_general.categoryConjunction.' . $categoryModeSelection);
                 }
 
-                $categoryMode = '<span style="font-weight:normal;font-style:italic">(' . htmlspecialchars($categoryMode) . ')</span>';
-            }
+                if (count($categories) > 0 && empty($categoryModeSelection)) {
+                    $categoryMode = $this->generateCallout($categoryMode);
+                } else {
+                    $categoryMode = htmlspecialchars($categoryMode);
+                }
 
-            // Category records
-            foreach ($categories as $id) {
-                $categoriesOut[] = $this->getRecordData($id, 'sys_category');
+                $this->tableData[] = [
+                    $this->getLanguageService()->sL(self::LLPATH . 'flexforms_general.categoryConjunction'),
+                    $categoryMode
+                ];
             }
 
             $includeSubcategories = $this->getFieldFromFlexform('settings.includeSubCategories');
             if ($includeSubcategories) {
-                $categoryMode .= '<br />+ ' . htmlspecialchars($this->getLanguageService()->sL(self::LLPATH . 'flexforms_general.includeSubCategories'));
+                $this->tableData[] = [
+                    $this->getLanguageService()->sL(self::LLPATH . 'flexforms_general.includeSubCategories'),
+                    '<i class="fa fa-check"></i>'
+                ];
             }
-
-            $this->tableData[] = [
-                $this->getLanguageService()->sL(self::LLPATH . 'flexforms_general.categories') .
-                '<br />' . $categoryMode,
-                implode(', ', $categoriesOut)
-            ];
         }
     }
 
@@ -566,7 +572,7 @@ class PageLayoutView
             $this->tableData[] = [
                 $this->getLanguageService()->sL(
                     self::LLPATH . 'flexforms_additional.disableOverrideDemand'),
-                ''
+                '<i class="fa fa-check"></i>'
             ];
         }
     }

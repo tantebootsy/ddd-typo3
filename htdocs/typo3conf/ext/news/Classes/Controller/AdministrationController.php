@@ -252,7 +252,9 @@ class AdministrationController extends NewsController
                     ObjectAccess::setProperty($demand, $propertyName, $propertyValue);
                 }
             }
-            $this->view->assign('hideForm', true);
+            if (!(bool)$this->tsConfiguration['alwaysShowFilter']) {
+                $this->view->assign('hideForm', true);
+            }
         }
         $categories = $this->categoryRepository->findParentCategoriesByPid($this->pageUid);
         $idList = [];
@@ -279,18 +281,13 @@ class AdministrationController extends NewsController
         $dblist->counter++;
         $dblist->MOD_MENU = ['bigControlPanel' => '', 'clipBoard' => '', 'localization' => ''];
         $pointer = MathUtility::forceIntegerInRange(GeneralUtility::_GP('pointer'), 0, 1000);
-        $limit = 20;
+        $limit = isset($this->settings['list']['paginate']['itemsPerPage']) ? (int)$this->settings['list']['paginate']['itemsPerPage'] : 20;
         $dblist->start($this->pageUid, 'tx_news_domain_model_news', $pointer, '',
             $demand->getRecursive(), $limit);
         $dblist->setDispFields();
         $dblist->noControlPanels = true;
         $dblist->setFields = [
-            'tx_news_domain_model_news' => [
-                'teaser',
-                'istopnews',
-                'datetime',
-                'categories'
-            ]
+            'tx_news_domain_model_news' => GeneralUtility::trimExplode(',', $this->tsConfiguration['columns'] ?: 'teaser,istopnews,datetime,categories', true)
         ];
 
         $dblist->script = $_SERVER['REQUEST_URI'];

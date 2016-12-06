@@ -9,7 +9,12 @@
 		"typo3/cms": "^7.6",
 		"typo3-ter/bsdist": "^1.0.0",
 		"typo3-ter/bootstrap-grids": "^1.0.0",
-		"typo3-ter/news":"^5.0.0"
+		"typo3-ter/news":"^5.0.0",
+	    "typo3-ter/realurl": "^2.0",
+	    "typo3-ter/vhs": "^3.0",
+	    "typo3-ter/seo-basics": "^0.9",
+	    "typo3-ter/dd-googlesitemap": "^2.0",
+	    "typo3-ter/nc-staticfilecache": "^3.0"
 	},
 	"extra": {
 		"typo3/cms": {
