@@ -2,17 +2,20 @@
 ### General
 ##################
 .DS_Store
-/vendor
+vendor/
 
 
 ##################
 ### TYPO3
 ##################
-/htdocs/typo3
-/htdocs/typo3conf/ext
-/htdocs/typo3temp
-/htdocs/uploads
+htdocs/typo3/
+htdocs/typo3conf/
+htdocs/typo3temp/
+htdocs/uploads/
+
+FIRST_INSTALL
+ENABLE_INSTALL_TOOL
 
 # Extension bsdist
-!/htdocs/fileadmin/bsdist
-!/htdocs/fileadmin/files
+!htdocs/fileadmin/bsdist
+!htdocs/fileadmin/files

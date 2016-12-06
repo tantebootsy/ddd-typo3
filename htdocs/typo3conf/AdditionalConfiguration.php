@@ -1,1 +1,1 @@
-../../configuration/current/AdditionalConfiguration.php
+../../configuration/AdditionalConfiguration.php
