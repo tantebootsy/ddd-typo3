@@ -13,6 +13,9 @@ htdocs/typo3conf/
 htdocs/typo3temp/
 htdocs/uploads/
 
+!htdocs/typo3conf/AdditionalConfiguration.php
+!htdocs/typo3conf/LocalConfiguration.php
+
 FIRST_INSTALL
 ENABLE_INSTALL_TOOL
 
