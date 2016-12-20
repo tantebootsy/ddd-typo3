@@ -1,24 +1,21 @@
-##################
-### General
-##################
-.DS_Store
+########################
+### GENERAL
+########################
 vendor/
+.DS_Store
+.idea/
+storage/logs/
+storage/tmp/
+.rocketeer/logs/
 
 
-##################
+########################
 ### TYPO3
-##################
-htdocs/typo3/
-htdocs/typo3conf/*
-!htdocs/typo3conf/AdditionalConfiguration.php
-!htdocs/typo3conf/LocalConfiguration.php
-
-htdocs/typo3temp/
-htdocs/uploads/
-
-FIRST_INSTALL
-ENABLE_INSTALL_TOOL
-
-# Extension bsdist
-!htdocs/fileadmin/bsdist
-!htdocs/fileadmin/files
+########################
+htdocs/index.php
+htdocs/typo3temp
+htdocs/typo3
+htdocs/FIRST_INSTALL
+htdocs/typo3conf/ext
+htdocs/typo3conf/ENABLE_INSTALL_TOOL
+htdocs/typo3conf/deprecation_*.log
