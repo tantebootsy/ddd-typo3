@@ -15,7 +15,6 @@ storage/tmp/
 htdocs/index.php
 htdocs/typo3temp/
 htdocs/typo3/
-htdocs/FIRST_INSTALL
 htdocs/typo3conf/ext/
 htdocs/typo3conf/ENABLE_INSTALL_TOOL
 htdocs/typo3conf/deprecation_*.log
