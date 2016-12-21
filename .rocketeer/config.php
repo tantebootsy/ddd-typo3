@@ -56,23 +56,33 @@ return [
     // In this section you can fine-tune the above configuration according
     // to the stage or connection currently in use.
     // Per example :
-    'stages' => array(
-      	'dev' => array(
-     		'scm' => array('branch' => 'dev'),
-     	),
-    	'stage' => array(
-     		'scm' => array('branch' => 'stage'),
-     	),
-        'prod' => array(
-                'scm' => array('branch' => 'master'),
-        ),
-    ),
+    'stages' => [
+      	'dev' => [
+     		'scm' => ['branch' => 'dev'],
+     	],
+    	'stage' => [
+     		'scm' => ['branch' => 'stage'],
+     	],
+        'prod' => [
+                'scm' => ['branch' => 'master'],
+        ],
+    ],
     ////////////////////////////////////////////////////////////////////
 
     'on'               => [
 
         // Stages configurations
-        'stages'      => [],
+    	'stages' => [
+      		'dev' => [
+     			'scm' => ['branch' => 'dev'],
+     		],
+    		'stage' => [
+     			'scm' => ['branch' => 'stage'],
+     		],
+        	'prod' => [
+                	'scm' => ['branch' => 'master'],
+        	],
+    	],
         // Connections configuration
         'connections' => [],
 

@@ -26,8 +26,8 @@ return [
         'setup'   => [],
         'deploy'  => [],
         'cleanup' => [
-            'rm -fr htdocs/typo3temp/Cache',
-			#'mysql -u -p -e "SELECT CONCAT( 'TRUNCATE TABLE ', GROUP_CONCAT(table_name) , ';' ) AS statement FROM information_schema.tables WHERE table_schema = 't3_7' AND table_name LIKE 'cf_%';"
+            #'rm -fr htdocs/typo3temp/Cache',
+            #'mysql -u -p -e "SELECT CONCAT( 'TRUNCATE TABLE ', GROUP_CONCAT(table_name) , ';' ) AS statement FROM information_schema.tables WHERE table_schema = 't3_7' AND table_name LIKE 'cf_%';"
         ],
     ],
 
