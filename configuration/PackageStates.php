@@ -180,12 +180,6 @@ return [
             'packagePath' => 'typo3conf/ext/bootstrap_core/',
             'suggestions' => [],
         ],
-        'bsdist' => [
-            'composerName' => 'laxap/bsdist',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/bsdist/',
-            'suggestions' => [],
-        ],
         'dd_googlesitemap' => [
             'composerName' => 'dmitryd/typo3-dd-googlesitemap',
             'state' => 'active',
@@ -238,6 +232,12 @@ return [
             'composerName' => 'typo3/cms-belog',
             'state' => 'inactive',
             'packagePath' => 'typo3/sysext/belog/',
+            'suggestions' => [],
+        ],
+        'bsdist' => [
+            'composerName' => 'laxap/bsdist',
+            'state' => 'inactive',
+            'packagePath' => 'typo3conf/ext/bsdist/',
             'suggestions' => [],
         ],
         'context_help' => [

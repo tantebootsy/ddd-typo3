@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8c0c55537694362135ef9833856f20a1",
-    "content-hash": "380498a79dd2b2a9c7eb0d0cd99a6a12",
+    "hash": "59956835b05d966c63f4fad80836095f",
+    "content-hash": "f0f28168c8dfce7cf9319c91b96d0d5c",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -111,6 +111,96 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
+        },
+        {
+            "name": "laxap/bootstrap-core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:laxap/bootstrap_core.git",
+                "reference": "9c62c6eb838d1dd9d867e292427455aa6a7e9cbf"
+            },
+            "type": "typo3-cms-extension",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pascal Mayer",
+                    "email": "typo3@bsdist.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Bootstrap specific changes for the frontend rendering of content elements. Adds sectionframe options and layout options for images and menus.",
+            "homepage": "http://www.bsdist.ch",
+            "keywords": [
+                "TYPO3 CMS",
+                "bootstrap",
+                "bsdist",
+                "typo3"
+            ],
+            "time": "2016-05-15 19:40:25"
+        },
+        {
+            "name": "laxap/bootstrap-grids",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:laxap/bootstrap_grids.git",
+                "reference": "6e1a68ef2639459601a05c70d978b44594555f61"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "Laxap\\BootstrapGrids\\": "Classes/"
+                }
+            },
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "Gridelements for bootstrap. Column grids, grids for simple accordions, tabs and content slider.",
+            "homepage": "http://www.bsdist.ch",
+            "keywords": [
+                "TYPO3 CMS",
+                "bootstrap",
+                "bsdist",
+                "gridelements",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/laxap/bootstrap_grids/issues"
+            },
+            "time": "2016-10-22 17:25:52"
+        },
+        {
+            "name": "laxap/bsdist",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:laxap/bsdist.git",
+                "reference": "2d5177f8c60b3453e6699284a1709676621ae70a"
+            },
+            "type": "typo3-cms-extension",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pascal Mayer",
+                    "email": "typo3@bsdist.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An initial page tree will be imported and bootstrap_core will be installed. A collection of files for the website layout and extension configuration is included.",
+            "homepage": "http://www.bsdist.ch",
+            "keywords": [
+                "TYPO3 CMS",
+                "bootstrap",
+                "bsdist",
+                "distribution",
+                "typo3"
+            ],
+            "time": "2016-05-15 19:41:46"
         },
         {
             "name": "mso/idna-convert",
@@ -489,16 +579,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.8.14",
+            "version": "v2.8.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "a871ba00e0f604dceac64c56c27f99fbeaf4854e"
+                "reference": "d5643cd095e5e37d31e004bb2606b5dd7e96602f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/a871ba00e0f604dceac64c56c27f99fbeaf4854e",
-                "reference": "a871ba00e0f604dceac64c56c27f99fbeaf4854e",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d5643cd095e5e37d31e004bb2606b5dd7e96602f",
+                "reference": "d5643cd095e5e37d31e004bb2606b5dd7e96602f",
                 "shasum": ""
             },
             "require": {
@@ -546,7 +636,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-15 23:02:12"
+            "time": "2016-12-06 11:59:35"
         },
         {
             "name": "symfony/debug",
@@ -607,16 +697,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v2.8.14",
+            "version": "v2.8.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "0023b024363dfc0cd21262e556f25a291fe8d7fd"
+                "reference": "c0f10576335743b881ac1ed39d18c0fa66048775"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/0023b024363dfc0cd21262e556f25a291fe8d7fd",
-                "reference": "0023b024363dfc0cd21262e556f25a291fe8d7fd",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/c0f10576335743b881ac1ed39d18c0fa66048775",
+                "reference": "c0f10576335743b881ac1ed39d18c0fa66048775",
                 "shasum": ""
             },
             "require": {
@@ -652,7 +742,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-03 07:52:58"
+            "time": "2016-12-13 09:38:12"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -714,125 +804,6 @@
             "time": "2016-11-14 01:06:16"
         },
         {
-            "name": "typo3-ter/bootstrap-core",
-            "version": "1.2.8",
-            "dist": {
-                "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/bootstrap_core/1.2.8/t3x/",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "typo3/cms-core": ">= 6.2.0, <= 7.6.99"
-            },
-            "conflict": {
-                "typo3-ter/bootstrap-package": "*"
-            },
-            "replace": {
-                "bootstrap_core": "self.version",
-                "typo3-ter/bootstrap_core": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "classmap": [
-                    ""
-                ],
-                "exclude-from-classmap": [
-                    "Migrations",
-                    "Tests",
-                    "tests",
-                    "class.ext_update.php"
-                ]
-            },
-            "authors": [
-                {
-                    "name": "Pascal Mayer",
-                    "email": "typo3@bsdist.ch",
-                    "company": "",
-                    "username": "laxap"
-                }
-            ],
-            "description": "Bootstrap specific changes for the frontend rendering of content elements. Adds sectionframe options and layout options for images and menus.",
-            "time": "2016-05-15 21:49:03"
-        },
-        {
-            "name": "typo3-ter/bootstrap-grids",
-            "version": "1.3.1",
-            "dist": {
-                "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/bootstrap_grids/1.3.1/t3x/",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "typo3-ter/gridelements": ">= 7.0.0",
-                "typo3/cms-core": ">= 7.6.0, <= 7.6.99"
-            },
-            "replace": {
-                "bootstrap_grids": "self.version",
-                "typo3-ter/bootstrap_grids": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "Laxap\\BootstrapGrids\\": "Classes/"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Pascal Mayer",
-                    "email": "typo3@bsdist.ch",
-                    "company": "",
-                    "username": "laxap"
-                }
-            ],
-            "description": "Gridelements for bootstrap. Column grids, grids for simple accordions, tabs and content slider.",
-            "time": "2016-10-22 19:30:15"
-        },
-        {
-            "name": "typo3-ter/bsdist",
-            "version": "1.3.3",
-            "dist": {
-                "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/bsdist/1.3.3/t3x/",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "typo3-ter/bootstrap-core": ">= 1.2.8",
-                "typo3/cms-core": ">= 6.2.0, <= 7.6.99"
-            },
-            "conflict": {
-                "typo3-ter/bootstrap-package": "*",
-                "typo3-ter/introduction": "*"
-            },
-            "replace": {
-                "bsdist": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "classmap": [
-                    ""
-                ],
-                "exclude-from-classmap": [
-                    "Migrations",
-                    "Tests",
-                    "tests",
-                    "class.ext_update.php"
-                ]
-            },
-            "authors": [
-                {
-                    "name": "Pascal Mayer",
-                    "email": "typo3@bsdist.ch",
-                    "company": "",
-                    "username": "laxap"
-                }
-            ],
-            "description": "An initial page tree will be imported and bootstrap_core will be installed. A collection of files for the website layout and extension configuration is included.",
-            "time": "2016-05-15 21:57:52"
-        },
-        {
             "name": "typo3-ter/dd-googlesitemap",
             "version": "2.1.1",
             "dist": {
@@ -864,48 +835,6 @@
             ],
             "description": "High performance Google sitemap implementation that avoids typical errors by other similar extensions",
             "time": "2016-09-28 11:55:40"
-        },
-        {
-            "name": "typo3-ter/gridelements",
-            "version": "7.0.5",
-            "dist": {
-                "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/gridelements/7.0.5/t3x/",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "typo3/cms-core": ">= 7.6.2, <= 7.99.99"
-            },
-            "conflict": {
-                "typo3-ter/jfmulticontent": "*",
-                "typo3-ter/templavoila": "*"
-            },
-            "replace": {
-                "gridelements": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "classmap": [
-                    ""
-                ],
-                "exclude-from-classmap": [
-                    "Migrations",
-                    "Tests",
-                    "tests",
-                    "class.ext_update.php"
-                ]
-            },
-            "authors": [
-                {
-                    "name": "Grid Elements Team",
-                    "email": "info@cybercraft.de",
-                    "company": "",
-                    "username": "cybercraft"
-                }
-            ],
-            "description": "This extension integrates the grid layout concept also to regular content elements - the grid elements.\r\nIt offers a lot of new features like advanced drag & drop or real references, that improve the usability of the page and list module to speed up the daily work with the backend.",
-            "time": "2016-01-29 13:10:05"
         },
         {
             "name": "typo3-ter/nc-staticfilecache",
@@ -1413,9 +1342,32 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "2.0.x-dev",
+            "alias_normalized": "2.0.9999999.9999999-dev",
+            "version": "9999999-dev",
+            "package": "laxap/bootstrap-core"
+        },
+        {
+            "alias": "2.0.x-dev",
+            "alias_normalized": "2.0.9999999.9999999-dev",
+            "version": "9999999-dev",
+            "package": "laxap/bsdist"
+        },
+        {
+            "alias": "2.0.x-dev",
+            "alias_normalized": "2.0.9999999.9999999-dev",
+            "version": "9999999-dev",
+            "package": "laxap/bootstrap-grids"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "laxap/bootstrap-core": 20,
+        "laxap/bsdist": 20,
+        "laxap/bootstrap-grids": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
