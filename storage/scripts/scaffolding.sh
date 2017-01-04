@@ -51,6 +51,15 @@ else
 	echo "... redirected master to new origin/master"
 fi
 
+# dev-branch zukünftig bei angabe von "git push" (ohne branchname) in neues projekt-repo pushen lassen
+git branch dev -u origin/dev
+if [ $? -ne 0 ]; then
+	echo "WARNING! Could not redirect master to new origin/master. Script stops."
+	exit 1
+else
+	echo "... redirected master to new origin/master"
+fi
+
 rm -f go.sh
 if [ $? -ne 0 ]; then
 	echo "WARNING! Could not remove symlink to this script. Script stops."
