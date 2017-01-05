@@ -1,69 +1,52 @@
 #! /bin/bash
 
-#@see http://askubuntu.com/questions/29370/how-to-check-if-a-command-succeeded
+#http://stackoverflow.com/questions/3846380/how-to-iterate-through-all-git-branches-using-bash-script
+
+# wrapper for command-execution
+function exec_command {
+	eval $1
+	if [ $? -ne 0 ]; then
+		echo "There was a problem with the following command: '$1'. Script will be terminated."
+		exit 1
+	else
+		echo "... '$1' done"
+	fi	
+}
 
 # bisheriges tmpl-remote umbenennen, wird ggf. später für Änderungen an der Template-Vorlage benötigt
-git remote rename origin tmpl
-if [ $? -ne 0 ]; then
-	echo "WARNING! Could not rename remote 'origin' to 'tmpl'. Script stops."
-	exit 1 
-	
-else
-	echo "... renamed remote 'origin' to 'tmpl'"
-fi
+exec_command "git remote rename origin tmpl"
 
+# neues projekt-remote hinzufügen
 echo "
 Enter the URL to the project-repo to which GIT shall push changes from now on, then press [ENTER]:
 WARNING! This will delete the content of the project-repo including its history!
 "
-read url
-if [ $? -ne 0 ]; then
-	echo "WARNING! Could not add url as origin-url. Script stops."
-	exit 1
-else
-	echo "... ar 'url' set"
-fi
+exec_command "read url"
 
-# neues projekt-remote hinzufügen
-git remote add origin $url
-if [ $? -ne 0 ]; then
-	echo "WARNING! Could not add new url as origin-url. Script stops."
-	exit 1
-else
-	echo "... added new url as origin-url"
-fi
+exec_command "git remote add origin $url"
 
 # neues projekt-repo leeren + gleichzeitig pushen
-git push origin --mirror
-if [ $? -ne 0 ]; then
-	echo "WARNING! Could not mirror-push to new repo 'origin'. Script stops."
-	exit 1
-else
-	echo "... mirror-pushed to new repo 'origin'"
-fi
+exec_command "git push origin --mirror"
 
 # master-branch zukünftig bei angabe von "git push" (ohne branchname) in neues projekt-repo pushen lassen
-git branch master -u origin/master
-if [ $? -ne 0 ]; then
-	echo "WARNING! Could not redirect master to new origin/master. Script stops."
-	exit 1
-else
-	echo "... redirected master to new origin/master"
-fi
+#exec_command "git branch master -u origin/master"
 
 # dev-branch zukünftig bei angabe von "git push" (ohne branchname) in neues projekt-repo pushen lassen
-git branch dev -u origin/dev
-if [ $? -ne 0 ]; then
-	echo "WARNING! Could not redirect master to new origin/master. Script stops."
-	exit 1
-else
-	echo "... redirected master to new origin/master"
-fi
+#exec_command "git branch dev -u origin/dev"
 
-rm -f go.sh
-if [ $? -ne 0 ]; then
-	echo "WARNING! Could not remove symlink to this script. Script stops."
-	exit 1
-else
-	echo "... removed symlink to this script"
-fi
+for branch in $(git for-each-ref --format='%(refname)' refs/heads/); do
+    #git log --oneline "$branch" ^origin/master
+	#git branch $branch -u origin/$branch
+	git reflog show $branch
+done
+
+# symlink to this script is deleted
+exec_command "rm -f go.sh"
+
+# name for project-database is asked for
+echo "Enter the name of the database for the project to be created, then press [ENTER]:"
+
+exec_command "read db"
+
+# project-database is created (needs proper character-set and collation-settings set vi my.cnf)
+exec_command "mysql -uroot -proot -e \"CREATE DATABASE $db\""
