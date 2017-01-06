@@ -1,1 +1,0 @@
-storage/scripts/scaffolding.sh
