@@ -9,6 +9,7 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['clearCacheSystem'] = true;
 $GLOBALS['TYPO3_CONF_VARS']['BE']['installToolPassword'] = '$P$CigWQqvNV2OEC0u9hMI/FKit3s0SAP0';
 $GLOBALS['TYPO3_CONF_VARS']['BE']['unzip_path'] = '/usr/bin/';
 $GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] = 'info@t3t-7.lokal';
+$GLOBALS['TYPO3_CONF_VARS']['BE']['lockSSL'] = '2';
 
 $GLOBALS['TYPO3_CONF_VARS']['FE']['noPHPscriptInclude'] = true;
 
@@ -35,7 +36,7 @@ $GLOBALS['TYPO3_CONF_VARS']['MAIL']['transport_smtp_username'] = 'typo3@michaelb
 $GLOBALS['TYPO3_CONF_VARS']['MAIL']['transport_smtp_password'] = 'RmMYcQbjK4JhEbUiPUu$';
 
 $GLOBALS['TYPO3_CONF_VARS']['DB'] = array(
-    'database' => 't3_7',
+    'database' => 't3tmpl',
     'host' => 'localhost',
     'username' => 'root',
     'password' => 'root',

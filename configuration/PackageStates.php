@@ -162,22 +162,16 @@ return [
             'packagePath' => 'typo3/sysext/tstemplate/',
             'suggestions' => [],
         ],
-        'gridelements' => [
-            'composerName' => 'GridElementsTeam/Gridelements',
+        'static_info_tables' => [
+            'composerName' => 'sjbr/static-info-tables',
             'state' => 'active',
-            'packagePath' => 'typo3conf/ext/gridelements/',
+            'packagePath' => 'typo3conf/ext/static_info_tables/',
             'suggestions' => [],
         ],
-        'bootstrap_grids' => [
-            'composerName' => 'laxap/bootstrap-grids',
+        'themes' => [
+            'composerName' => 'typo3-themes/themes',
             'state' => 'active',
-            'packagePath' => 'typo3conf/ext/bootstrap_grids/',
-            'suggestions' => [],
-        ],
-        'bootstrap_core' => [
-            'composerName' => 'laxap/bootstrap-core',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/bootstrap_core/',
+            'packagePath' => 'typo3conf/ext/themes/',
             'suggestions' => [],
         ],
         'dd_googlesitemap' => [
@@ -232,12 +226,6 @@ return [
             'composerName' => 'typo3/cms-belog',
             'state' => 'inactive',
             'packagePath' => 'typo3/sysext/belog/',
-            'suggestions' => [],
-        ],
-        'bsdist' => [
-            'composerName' => 'laxap/bsdist',
-            'state' => 'inactive',
-            'packagePath' => 'typo3conf/ext/bsdist/',
             'suggestions' => [],
         ],
         'context_help' => [

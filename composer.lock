@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "59956835b05d966c63f4fad80836095f",
-    "content-hash": "f0f28168c8dfce7cf9319c91b96d0d5c",
+    "hash": "3c831fc4264eaeba1a707a9d325c601b",
+    "content-hash": "8e96506e090c1d8839a26f15c67d00a1",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -111,96 +111,6 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
-        },
-        {
-            "name": "laxap/bootstrap-core",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:laxap/bootstrap_core.git",
-                "reference": "9c62c6eb838d1dd9d867e292427455aa6a7e9cbf"
-            },
-            "type": "typo3-cms-extension",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Pascal Mayer",
-                    "email": "typo3@bsdist.ch",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Bootstrap specific changes for the frontend rendering of content elements. Adds sectionframe options and layout options for images and menus.",
-            "homepage": "http://www.bsdist.ch",
-            "keywords": [
-                "TYPO3 CMS",
-                "bootstrap",
-                "bsdist",
-                "typo3"
-            ],
-            "time": "2016-05-15 19:40:25"
-        },
-        {
-            "name": "laxap/bootstrap-grids",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:laxap/bootstrap_grids.git",
-                "reference": "6e1a68ef2639459601a05c70d978b44594555f61"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "Laxap\\BootstrapGrids\\": "Classes/"
-                }
-            },
-            "license": [
-                "GPL-2.0"
-            ],
-            "description": "Gridelements for bootstrap. Column grids, grids for simple accordions, tabs and content slider.",
-            "homepage": "http://www.bsdist.ch",
-            "keywords": [
-                "TYPO3 CMS",
-                "bootstrap",
-                "bsdist",
-                "gridelements",
-                "typo3"
-            ],
-            "support": {
-                "issues": "https://github.com/laxap/bootstrap_grids/issues"
-            },
-            "time": "2016-10-22 17:25:52"
-        },
-        {
-            "name": "laxap/bsdist",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:laxap/bsdist.git",
-                "reference": "2d5177f8c60b3453e6699284a1709676621ae70a"
-            },
-            "type": "typo3-cms-extension",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Pascal Mayer",
-                    "email": "typo3@bsdist.ch",
-                    "role": "Developer"
-                }
-            ],
-            "description": "An initial page tree will be imported and bootstrap_core will be installed. A collection of files for the website layout and extension configuration is included.",
-            "homepage": "http://www.bsdist.ch",
-            "keywords": [
-                "TYPO3 CMS",
-                "bootstrap",
-                "bsdist",
-                "distribution",
-                "typo3"
-            ],
-            "time": "2016-05-15 19:41:46"
         },
         {
             "name": "mso/idna-convert",
@@ -984,6 +894,81 @@
             "time": "2015-12-23 11:17:35"
         },
         {
+            "name": "typo3-ter/static-info-tables",
+            "version": "6.3.10",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/static_info_tables/6.3.10/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">= 5.3.7",
+                "typo3/cms-core": ">= 6.2.0, <= 7.6.99"
+            },
+            "conflict": {
+                "typo3-ter/cc-infotablesmgm": "<= 99.99.99",
+                "typo3-ter/sr-static-info": "<= 99.99.99",
+                "typo3-ter/uncache": "<= 99.99.99"
+            },
+            "replace": {
+                "static_info_tables": "self.version",
+                "typo3-ter/static_info_tables": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "SJBR\\StaticInfoTables\\": "Classes/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Stanislas Rolland/Ren Fritz",
+                    "email": "typo3@sjbr.ca",
+                    "company": "SJBR",
+                    "username": "stan"
+                }
+            ],
+            "description": "Data and API for countries, languages and currencies.",
+            "time": "2016-07-15 00:27:57"
+        },
+        {
+            "name": "typo3-ter/themes",
+            "version": "7.0.3",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/themes/7.0.3/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "typo3-ter/static-info-tables": ">= 6.3.0, <= 6.3.99",
+                "typo3/cms-core": ">= 7.6.0, <= 7.6.99"
+            },
+            "conflict": {
+                "typo3-ter/belayout-tsprovider": "<= 1.99.99",
+                "typo3-ter/yaml-parser": "<= 1.99.99"
+            },
+            "replace": {
+                "themes": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "KayStrobach\\Themes\\": "Classes/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Themes-Team (Kay Strobach, Jo Hasenau, Thomas Deuling)",
+                    "email": "typo3@kay-strobach.de",
+                    "company": "private",
+                    "username": "themes"
+                }
+            ],
+            "time": "2016-07-22 10:40:37"
+        },
+        {
             "name": "typo3-ter/vhs",
             "version": "3.1.0",
             "dist": {
@@ -1342,32 +1327,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "alias": "2.0.x-dev",
-            "alias_normalized": "2.0.9999999.9999999-dev",
-            "version": "9999999-dev",
-            "package": "laxap/bootstrap-core"
-        },
-        {
-            "alias": "2.0.x-dev",
-            "alias_normalized": "2.0.9999999.9999999-dev",
-            "version": "9999999-dev",
-            "package": "laxap/bsdist"
-        },
-        {
-            "alias": "2.0.x-dev",
-            "alias_normalized": "2.0.9999999.9999999-dev",
-            "version": "9999999-dev",
-            "package": "laxap/bootstrap-grids"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "laxap/bootstrap-core": 20,
-        "laxap/bsdist": 20,
-        "laxap/bootstrap-grids": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
