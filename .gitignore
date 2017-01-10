@@ -4,8 +4,13 @@
 vendor/
 .DS_Store
 .idea/
+.buildpath
+.project
+.settings/
+
 storage/logs/
 storage/tmp/
+
 .rocketeer/logs/
 
 
@@ -14,7 +19,9 @@ storage/tmp/
 ########################
 htdocs/index.php
 htdocs/typo3temp/
-htdocs/typo3/
+htdocs/typo3
+htdocs/fileadmin/
+htdocs/uploads/
 htdocs/typo3conf/ext/
 htdocs/typo3conf/ENABLE_INSTALL_TOOL
 htdocs/typo3conf/deprecation_*.log
