@@ -16,7 +16,8 @@
 		"typo3-ter/seo-basics": "^0.9",
 		"typo3-ter/dd-googlesitemap": "^2.0",
 		"typo3-ter/nc-staticfilecache": "^3.0",
-		"typo3-ter/themes": "^7.0"
+		"typo3-ter/themes": "^7.0",
+		"typo3-ter/theme_bootstrap": "^7.0",
 	},
 	"extra": {
 		"typo3/cms": {
