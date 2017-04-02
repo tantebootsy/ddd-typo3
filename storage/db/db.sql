@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.42, for osx10.6 (i386)
 --
--- Host: localhost    Database: t3tmpl
+-- Host: localhost    Database: ddd_typo3
 -- ------------------------------------------------------
 -- Server version	5.5.42
 
@@ -2765,4 +2765,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-01-10 21:52:52
+-- Dump completed on 2017-04-02 14:32:27
